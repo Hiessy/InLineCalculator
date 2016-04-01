@@ -1,0 +1,8 @@
+# Archivo de propiedas para instanciar las operaciones
+ 
+ 
+#Configuracion Operaciones 
+suma.classname=ort.t5.tp2.model.operaciones.Suma
+resta.classname=ort.t5.tp2.model.operaciones.Resta
+division.classname=ort.t5.tp2.model.operaciones.Division
+multiplicacion.classname=ort.t5.tp2.model.operaciones.Multiplicacion
