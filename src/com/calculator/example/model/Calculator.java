@@ -11,7 +11,8 @@ public class Calculator {
 
     private static final double PI = Math.PI;
     private static final double E = Math.E;
-    private static Calculator instanciaCalculadoraLienal = new Calculator();
+    private static Calculator inLineCalculatorInstance = new Calculator();
+    private static Calculator parenthesesCalculatorInstance = new Calculator();
     private OperationFactory operationFactory = new OperationFactory();
     private double total = 0.0;
     private String sign = "+";
@@ -23,7 +24,11 @@ public class Calculator {
 
     // This will return the only available object
     public static Calculator getInstance() {
-	return instanciaCalculadoraLienal;
+	return inLineCalculatorInstance;
+    }
+    
+    public static Calculator getparenthesesInstance() {
+	return parenthesesCalculatorInstance;
     }
 
     public double getTotal() {
