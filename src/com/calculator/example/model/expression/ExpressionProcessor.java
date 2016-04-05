@@ -1,4 +1,4 @@
-package com.calculator.example.controller;
+package com.calculator.example.model.expression;
 
 import com.calculator.example.model.Calculator;
 
@@ -12,6 +12,11 @@ public class ExpressionProcessor {
 	for (int i = 0; i < expresionArray.length; i++) {
 
 	    if (!ExpressionValidator.isEquals(expresionArray[i])) {
+		if(ExpressionValidator.isClear(expresionArray[i])){
+		    calculator.clear();
+		    total = calculator.getTotal();
+		    System.out.println("CE");
+		}
 
 		if (!ExpressionValidator.isNumber(expresionArray[i])) {
 		    calculator.addOperation(expresionArray[i]);

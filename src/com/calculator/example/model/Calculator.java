@@ -9,6 +9,8 @@ import com.calculator.example.model.operaciones.OperationFactory;
  */
 public class Calculator {
 
+    private static final double PI = Math.PI;
+    private static final double E = Math.E;
     private static Calculator instanciaCalculadoraLienal = new Calculator();
     private OperationFactory operationFactory = new OperationFactory();
     private double total = 0.0;
@@ -25,10 +27,16 @@ public class Calculator {
     }
 
     public double getTotal() {
-
 	return this.total;
     }
-
+    
+    public double getPI() {
+	return PI;
+    }
+    
+    public double getE() {
+	return E;
+    }
     // resets all value to there initial setting
     public void clear() {
 	total = 0.0;

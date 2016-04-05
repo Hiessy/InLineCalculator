@@ -1,4 +1,4 @@
-package com.calculator.example.controller;
+package com.calculator.example.model.expression;
 
 public class ExpressionValidator {
 
@@ -23,12 +23,19 @@ public class ExpressionValidator {
     }
 
     public static boolean isEquals(String ch) {
-	if ("=".equals(ch) || "CE".equals(ch)) {
+	if ("=".equals(ch)) {
 	    return true;
 	}
 	return false;
     }
 
+    public static boolean isClear(String ch) {
+	if ("CE".toUpperCase().equals(ch)) {
+	    return true;
+	}
+	return false;
+    }
+    
     // TODO: compliance con lo que piden en taller
     public static boolean isNumber(String s, String s1) {
 	boolean result = true;
